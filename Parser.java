@@ -2,6 +2,21 @@
 // modeled after the programming language's grammar.
 // It constructs and has-a Scanner for the program
 // being parsed.
+//
+// Grammar That is being implemented
+//stmt  : assn ';'
+//assn  : id '=' expr
+//expr  : term addop expr
+//      | term
+//term  : fact mulop term
+//      | fact
+//fact  : id 
+//      | num
+//      | '(' expr ')'
+//      | '-' fact
+//addop : '+' 
+//mulop : '*'
+//      | '/'
 
 import java.util.*;
 
@@ -46,6 +61,11 @@ public class Parser {
     }
 
     private NodeFact parseFact() throws SyntaxException {
+    if (curr().equals(new Token("-"))){
+    	match("-");
+    	NodeFact fact=parseFact();
+    	return new NodeFactUnary(fact);
+    }
 	if (curr().equals(new Token("("))) {
 	    match("(");
 	    NodeExpr expr=parseExpr();

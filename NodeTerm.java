@@ -1,3 +1,9 @@
+//This is a subclass, of class Node,
+//collectively modeling the parse-tree term.
+//A term takes in three variables a fact, mulop and
+//recursively calls itself. Then will uses these
+//variables to return a term, mulop or a fact. 
+
 public class NodeTerm extends Node {
 
     private NodeFact fact;
@@ -19,7 +25,7 @@ public class NodeTerm extends Node {
 	    this.term.append(term);
     }
 
-    public int eval(Environment env) throws EvalException {
+    public Double eval(Environment env) throws EvalException {
 	return term==null
 	    ? fact.eval(env)
 	    : mulop.op(term.eval(env),fact.eval(env));

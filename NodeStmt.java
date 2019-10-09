@@ -1,3 +1,7 @@
+//This is a subclass, of class Node,
+//collectively modeling the parse-tree stmt.
+//The statement will take in a assignment node
+//and return the assinments eval.
 public class NodeStmt extends Node {
 
     private NodeAssn assn;
@@ -6,7 +10,7 @@ public class NodeStmt extends Node {
 	this.assn=assn;
     }
 
-    public int eval(Environment env) throws EvalException {
+    public Double eval(Environment env) throws EvalException {
 	return assn.eval(env);
     }
 

@@ -6,7 +6,7 @@ public class NodeFactExpr extends NodeFact {
 	this.expr=expr;
     }
 
-    public int eval(Environment env) throws EvalException {
+    public Double eval(Environment env) throws EvalException {
 	return expr.eval(env);
     }
 

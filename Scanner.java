@@ -16,6 +16,7 @@ public class Scanner {
     private Set<String> legits=new HashSet<String>();
     private Set<String> keywords=new HashSet<String>();
     private Set<String> operators=new HashSet<String>();
+    private Set<String> comments=new HashSet<String>();
 
     // initializers for previous sets
 
@@ -23,7 +24,11 @@ public class Scanner {
 	for (char c=lo; c<=hi; c++)
 	    s.add(c+"");
     }    
-
+    
+    private void initComments(Set<String> s) {
+    s.add("#");
+    }
+    
     private void initWhitespace(Set<String> s) {
 	s.add(" ");
 	s.add("\n");
@@ -71,6 +76,7 @@ public class Scanner {
 	initLegits(legits);
 	initKeywords(keywords);
 	initOperators(operators);
+	initComments(comments);
     }
 
     // handy string-processing methods
@@ -98,7 +104,7 @@ public class Scanner {
 	many(digits);
 	token=new Token("num",program.substring(old,pos));
     }
-
+    
     private void nextKwId() {
 	int old=pos;
 	many(letters);
@@ -131,7 +137,12 @@ public class Scanner {
 	}
 	many(whitespace);
 	String c=program.charAt(pos)+"";
-	if (digits.contains(c))
+	if(comments.contains(c)) {
+		pos++;
+	    past('#');
+	    next();
+	}
+	else if (digits.contains(c))
 	    nextNumber();
 	else if (letters.contains(c))
 	    nextKwId();
