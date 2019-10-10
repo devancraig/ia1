@@ -37,6 +37,7 @@ public class Scanner {
 
     private void initDigits(Set<String> s) {
 	fill(s,'0','9');
+  s.add(".");
     }
 
     private void initLetters(Set<String> s) {

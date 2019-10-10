@@ -32,7 +32,7 @@ public class Environment {
     	if(map.containsKey(var)) {
     		return map.get(var);
     	}
-    	throw new EvalException(pos ,"Error cant retrieve data" + var);
+    	throw new EvalException(pos ,"Error cannot retrieve data for variable " + var);
     	
     	} 
 
