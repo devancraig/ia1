@@ -18,10 +18,10 @@ import java.util.Map;
 
 public class Environment {
 
-	private HashMap<String,Double> map;
+	private HashMap<String,Double> map; //creates a hashmap object takes in a string for a variable and double for what the variable is equal to
 	
 	public Environment() {
-		map = new HashMap<String,Double>();
+		map = new HashMap<String,Double>(); //initialize the hashmap
 	}
 	
     public Double put(String var, double val) { 
@@ -30,7 +30,7 @@ public class Environment {
     	}
     public Double get(int pos, String var) throws EvalException { 
     	if(map.containsKey(var)) {
-    		return map.get(var);
+    		return map.get(var); //returns the key for the hashmap
     	}
     	throw new EvalException(pos ,"Error cannot retrieve data for variable " + var);
     	

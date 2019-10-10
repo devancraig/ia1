@@ -1,3 +1,6 @@
+//EvalException is used to take in a position and a string message and 
+//read out to the console. When read out it will say what the error 
+//was and what variable broke the function. 
 public class EvalException extends Exception {
 
     private int pos;

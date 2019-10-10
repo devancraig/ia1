@@ -1,3 +1,8 @@
+//This is a subclass, of class Node,
+//collectively modeling the parse-tree Addop.
+//This class uses a string addop to create a 
+//double op that checks for "+" and "-". Then
+//returns this in the parser to complete the addop. 
 public class NodeAddop extends Node {
 
     private String addop;
