@@ -1,8 +1,8 @@
 //This is a subclass, of class NodeFact,
 //collectively modeling the parse-tree fact.
-//An Id is determined if there is a found
-//string for an Id at a certian position. If
-//an Id is found then it will return a double with a position and an Id.
+//This class takes in a string Id
+//which is used to hold the Id when it is
+//returned along with the position.
 public class NodeFactId extends NodeFact {
     private String id;
 

@@ -1,7 +1,7 @@
 //This is a subclass, of class NodeFact,
 //collectively modeling the parse-tree fact.
-//Uses the NodeExpr to get a variable expr
-//that will return the enviroment of an expression
+//This class uses the NodeExpr class to get a variable expr
+//that will return a the expression eval. 
 public class NodeFactExpr extends NodeFact {
 
     private NodeExpr expr;

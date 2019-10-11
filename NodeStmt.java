@@ -1,7 +1,7 @@
 //This is a subclass, of class Node,
 //collectively modeling the parse-tree stmt.
-//The statement will take in a assignment node
-//and return the assinments eval.
+//The class uses a assignment node
+//and returns the assignment eval in the enviroment.
 public class NodeStmt extends Node {
 
     private NodeAssn assn;

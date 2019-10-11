@@ -3,7 +3,7 @@
 // It constructs and has-a Scanner for the program
 // being parsed.
 //
-// Grammar That is being implemented
+// Grammar that is being implemented
 //stmt  : assn ';'
 //assn  : id '=' expr
 //expr  : term addop expr

@@ -1,8 +1,8 @@
 //This is a subclass, of class Node,
 //collectively modeling the parse-tree term.
-//A term takes in three variables a fact, mulop and
-//recursively calls itself. Then will uses these
-//variables to return a term, mulop or a fact. 
+//This class takes in three variables a fact, mulop and
+//recursively calls itself. Then uses these
+//variables to return either a term, mulop or a fact. 
 
 public class NodeTerm extends Node {
 

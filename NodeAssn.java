@@ -1,8 +1,8 @@
 //This is a subclass, of class Node,
 //collectively modeling the parse-tree Assn.
 //This class creates everything needed for an
-//assignment. Then will be tested in the parser
-//using it arguments of an id and expr
+//assignment using a string for id and node expr
+//which is then put into the enviroment. 
 public class NodeAssn extends Node {
 
     private String id;

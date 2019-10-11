@@ -1,6 +1,6 @@
 //This is a subclass, of class Node,
 //collectively modeling the parse-tree mulop.
-//Mulop will do two thing, first is check which
+//This class does two things, first is to check which
 //operation it is dealing with multiplication or division.
 //It does this by taking in two argument the string containing
 //the operation and int for the position. Then will check to see
@@ -19,7 +19,7 @@ public class NodeMulop extends Node {
 	    return o1*o2;
 	if (mulop.equals("/"))
 	    return o1/o2;
-	throw new EvalException(pos,"bogus mulop: "+mulop);
+	throw new EvalException(pos,"bogus mulop: "+mulop);//If nothing is found it returns an error
     }
 
 }

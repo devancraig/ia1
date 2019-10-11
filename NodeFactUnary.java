@@ -1,7 +1,7 @@
 //This is a subclass, of class NodeFact,
 //collectively modeling the parse-tree fact.
-//Takes in a fact and multiples it by negative
-//one to return the negative number.
+//This class takes in a fact which then will be 
+//multiplied by one to return the negative number.
 public class NodeFactUnary extends NodeFact {
 	private NodeFact fact;
 	

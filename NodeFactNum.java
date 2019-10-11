@@ -1,6 +1,6 @@
 //This is a subclass, of class NodeFact,
 //collectively modeling the parse-tree fact.
-//Takes in a string for a number
+//This class takes in a string for a number
 //then is returned as parsed double.
 public class NodeFactNum extends NodeFact {
 

@@ -1,7 +1,7 @@
 //This is a subclass, of class Node,
 //collectively modeling the parse-tree Addop.
 //This class uses a string addop to create a 
-//double op that checks for "+" and "-". Then
+//double op that checks for both "+" and "-". Then
 //returns this in the parser to complete the addop. 
 public class NodeAddop extends Node {
 
@@ -17,7 +17,7 @@ public class NodeAddop extends Node {
 	    return o1+o2;
 	if (addop.equals("-"))
 	    return o1-o2;
-	throw new EvalException(pos,"bogus addop: "+addop);
+	throw new EvalException(pos,"bogus addop: "+addop); //If both "+" and "-" are not found this will return an error
     }
 
 }

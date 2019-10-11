@@ -1,6 +1,6 @@
 //This is a subclass, of class Node,
 //collectively modeling the parse-tree Expr.
-//This class Setups all the key components for
+//This class sets up all the key components 
 //to parse an expression using a addop and a term
 //as it's arguments.
 public class NodeExpr extends Node {
